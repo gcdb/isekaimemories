@@ -1,0 +1,20 @@
+{
+  "name": "isekaimemories",
+  "version": "1.0.0",
+  "description": "Isekai Memories website",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gcdb/isekaimemories.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gcdb/isekaimemories/issues"
+  },
+  "homepage": "https://github.com/gcdb/isekaimemories#readme",
+  "dependencies": {
+    "webpack": "^5.61.0"
+  }
+}
