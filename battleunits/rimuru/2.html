@@ -114,7 +114,7 @@
 			<!-- /.Basic Info -->
 			<!-- /.End of Left Sidebar -->
 			<!-- Skills -->
-			<div class="col-lg-6 mb-4">
+			<div class="col-lg-6 mb-4 mt-2 mt-lg-0">
 				<h2 class="whitetext border-bottom pb-2"><b style="margin-left: -2px">Battle Skills (Lv.1)</b></h2>
 
 				<div class="whitetext">
@@ -137,7 +137,7 @@
 							</div>
 							<div class="col-lg-9 my-auto px-lg-0 px-2">
 								<h5 class="mt-2"><b>Skill 2: Heal Assist</b></h5>
-								<p>Heals all allies' HP by <span style="color:#03DD08">15%</span>. Increases Soul of Divine Protection damage until the end of battle by <span style="color:#03DD08">5%</span> (Max: <span style="color:#03DD08">100%</span>).</p>
+								<p>Heals all allies' HP by <span style="color:#03DD08">15%</span>. Increases <a data-toggle="popover-hover" data-img="../../images/icons/soul_of_divine_protection.png"><b style="color:#00d4fe">Soul of Divine Protection</b></a> damage until the end of battle by <span style="color:#03DD08">5%</span> (Max: <span style="color:#03DD08">100%</span>).</p>
 							</div>
 						</div>
 					</div>
@@ -151,7 +151,7 @@
 					</div>
 					<div class="col-lg-9 my-auto px-lg-0 px-2">
 						<h5 class="mt-2"><b>Black Lightning</b></h5>
-						<p>Unleashes an all-target water magic attack for <span style="color:#03DD08">230/235/240/245/250/270%</span> normal damage.</p>
+						<p class="mb-0">Unleashes an all-target water magic attack for <span style="color:#03DD08">230/235/240/245/250/270%</span> normal damage.</p>
 					</div>
 				</div>
 
@@ -162,7 +162,7 @@
 					<p>When affected by Critical Resistance UP, increases own DEF by 7% at start of turn (available in support formation).</p>
 
 					<h5 class="mt-2"><b>DEF UP (5★ Awaken x3)</b></h5>
-					<p>When affected by Critical Resistance UP, increases own DEF by 11% at start of turn (available in support formation).</p>
+					<p class="mb-0">When affected by Critical Resistance UP, increases own DEF by 11% at start of turn (available in support formation).</p>
 				</div>
 
 			</div>
@@ -194,9 +194,12 @@
 	<script src="../../lib/jquery/jquery.min.js"></script>
 	<script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
 	<script>
-		$(document).ready(function(){
-			$('[data-toggle="tooltip"]').tooltip();   
+		$('[data-toggle="popover-hover"]').popover({
+			html: true,
+			trigger: 'hover',
+			placement: 'right',
+			content: function () { return '<img src="' + $(this).data('img') + '" />'; }
 		});
-	</script>
+</script>
 </body>
 </html>
