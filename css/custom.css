@@ -1,20 +1,4 @@
-@font-face {
-  font-family: 'Thorndale';
-  src: local('Thorndale Bold'),
-  url('Thorndale-Bold.woff2') format('woff2'),
-  url('Thorndale-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Thorndale';
-  src: local('Thorndale'),
-  url('Thorndale.woff2') format('woff2'),
-  url('Thorndale.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 .navbar{
   background: #1D2430;
@@ -51,7 +35,7 @@ th[colspan="3"] {
 html, body{
  height:100%;
  margin:0;
- font-family: 'Thorndale';
+ font-family: 'Roboto Slab', serif
  font-size: 18px;
 }
 
