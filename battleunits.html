@@ -12,6 +12,11 @@
 	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Custom styles for this template -->
 	<link href="css/custom.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+	<link href="css/uikit.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/dataTables.uikit.min.css">
 	<script data-ad-client="ca-pub-7948401406873175" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XX1MLEM3JS"></script>
@@ -25,151 +30,118 @@
 </head>
 <body class="darktheme">
 	<!-- Navigation -->
-	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-		<div class="container">
-			<a class="navbar-brand" href="index">GCDB</a>
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="index">Home</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle active" href="#" data-toggle="dropdown">
-							Characters
-						</a>
-						<div class="dropdown-menu dropdown-menu-right greytheme" aria-labelledby="navbarDropdownPortfolio">
-							<a class="dropdown-item whitetext" href="characters">List</a>
-							<a class="dropdown-item whitetext" href="tierlist">Tierlist</a>
-							<a class="dropdown-item whitetext" href="ccranking">CC Ranking</a>
-							<a class="dropdown-item whitetext" href="skillfilter">Skill Filter</a>
-							<a class="dropdown-item whitetext" href="unique">List of Uniques</a>
-							<a class="dropdown-item whitetext" href="association">Associations</a>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="gamenews">Game News</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-							Useful Information
-						</a>
-						<div class="dropdown-menu dropdown-menu-right greytheme" aria-labelledby="navbarDropdownPortfolio">
-							<a class="dropdown-item whitetext" href="cooking">Cooking</a>
-							<a class="dropdown-item whitetext" href="gears">Gears</a>
-							<a class="dropdown-item whitetext" href="statuseffect">Status Effects</a>
-							
-
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" style="color:#c2c4ff" href="https://sdsgc.gg">Global &#10132;</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+	<div id="nav-placeholder">
+	</div>
 	<!-- Page Content -->
 	<div class="container">
 		<!-- Character & Icon -->
 		<div class="row">
-			<div class="mt-4 titlebox col-lg-4">
-				<h1 class="whitetext mb-4">Character List</h1>
+			<div class="mt-4 titlebox col-lg-6">
+				<h1 class="whitetext mb-4">Battle Unit List</h1>
 			</div>
 		</div>
-		<div class="row mb-4">
-			<div class="table-responsive">
-				<table id="chartable" class="table table-dark table-bordered mb-0" style="width:100%;">
-					<thead>
-						<tr class="header">
-							<th>Name</th>
-							<th>Attribute</th>
-							<th>Rarity</th>
-							<th>Race</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><a href="characters/megerda/1"><img src="images/characters/megerda/ssrb_portrait.png" style="width:50px; height:50px;" loading="lazy"><br>Megerda</a></td>
-							<td>Blue</td>
-							<td>SSR</td>
-							<td>Unknown</td>
-						</tr>
-						<tr>
-							<td><a href="characters/megerda/1"><img src="images/characters/megerda/ssrb_portrait.png" style="width:50px; height:50px;" loading="lazy"><br>Megerda</a></td>
-							<td>Blue</td>
-							<td>SSR</td>
-							<td>Unknown</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+
+		<div class="mb-4">
+			<table id="table_id" class="uk-table whitetext uk-table-middle uk-table-responsive" style="width:100%; border-color: red">
+				<thead class="whitetext">
+					<tr>
+						<th style="vertical-align: middle;">Name</th>
+						<th style="vertical-align: middle;">Attribute</th>
+						<th style="vertical-align: middle;">Rarity</th>
+						<th style="vertical-align: middle;">Attack Type</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="battleunits/harmonizer_of_monsters_and_humans_rimuru_tempest"><img src="images/battleunits/harmonizer_of_monsters_and_humans_rimuru_tempest/portrait.png" style="width:50px; height:50px;" loading="lazy"><br>Harmonizer of Monsters and Humans Rimuru Tempest</a></td>
+						<td>Water</td>
+						<td>5★</td>
+						<td>Magical</td>
+					</tr>
+					<tr>
+						<td><a href="battleunits/budding_of_deep_green_treyni"><img src="images/battleunits/budding_of_deep_green_treyni/portrait.png" style="width:50px; height:50px;" loading="lazy"><br>Budding of Deep Green Treyni</a></td>
+						<td>Earth</td>
+						<td>5★</td>
+						<td>Magical</td>
+					</tr>
+					<tr>
+						<td><a href="battleunits/conqueror_of_flames_shizue_izawa"><img src="images/battleunits/conqueror_of_flames_shizue_izawa/portrait.png" style="width:50px; height:50px;" loading="lazy"><br>Conqueror of Flames Shizue Izawa</a></td>
+						<td>Fire</td>
+						<td>5★</td>
+						<td>Physical</td>
+					</tr>
+					
+				</tbody>
+			</table>
+
 		</div>
 		<!-- /.Row -->
-		<!-- Horizontal -->
-		<ins class="adsbygoogle"
-		style="display:block"
-		data-ad-client="ca-pub-7948401406873175"
-		data-ad-slot="1023841511"
-		data-ad-format="auto"
-		data-full-width-responsive="true"></ins>
-		<script>
-			(adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<!-- Horizontal -->
-		<ins class="adsbygoogle"
-		style="display:block"
-		data-ad-client="ca-pub-7948401406873175"
-		data-ad-slot="1023841511"
-		data-ad-format="auto"
-		data-full-width-responsive="true"></ins>
-		<script>
-			(adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
 	</div>
-	<!-- /.container -->
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	
+	<!-- Horizontal -->
+	<ins class="adsbygoogle"
+	style="display:block"
+	data-ad-client="ca-pub-7948401406873175"
+	data-ad-slot="1023841511"
+	data-ad-format="auto"
+	data-full-width-responsive="true"></ins>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Horizontal -->
+	<ins class="adsbygoogle"
+	style="display:block"
+	data-ad-client="ca-pub-7948401406873175"
+	data-ad-slot="1023841511"
+	data-ad-format="auto"
+	data-full-width-responsive="true"></ins>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+	<!-- /.container -->
 	<!-- Footer -->
 	<footer class="py-1 bg-dark">
 		<p class="m-0 text-center text-white">GCDatabase is not affliated with or endorsed by Netmarble | <a href="https://www.paypal.me/gcdatabase" style="color: #ff5500" target="_blank">Donations</a> | <a href="https://gcdatabase.com/specialthanks" style="color: #fcba03" target="_blank">Special Thanks</a></p>
 	</footer>
 	<!-- Bootstrap core JavaScript -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-	<script src="dist/tablefilter/tablefilter.js"></script>
-	<script type="text/javascript">
-		var filtersConfig = {
-		// instruct TableFilter location to import ressources from
-		base_path: 'dist/tablefilter/',
-		auto_filter: {
-		delay: 300 //milliseconds
-	},
-	responsive: true,
-	col_1: 'select',
-	col_2: 'select',
-	col_3: 'select',
-	alternate_rows: true,
-	rows_counter: false,
-	btn_reset: false,
-	loader: false,
-	mark_active_columns: true,
-	highlight_keywords: false,
-	no_results_message: true,
-	col_types: [
-	'string', 'string', 'string',
-	'string'
-	],
-	extensions: [{
-		name: 'sort',
-		images_path: 'dist/tablefilter/style/themes/'
-	}]
-};
-var tf = new TableFilter('chartable', filtersConfig);
-tf.init();
-</script>
+	<script>
+		$(document).ready(function() {
+			$('#table_id').DataTable( {
+				"paging":   false,
+
+			} );
+		} );
+	</script>
+	<style>
+		html, body {
+			height: 100vh;
+			overflow: auto;
+		}
+		#table_id_info{
+			color: white;
+		}
+		label {
+			color: white;
+		}
+
+		input {
+			color: white;
+		}
+
+		.uk-table th {
+			text-align: center;
+			color: white;
+		}
+
+		
+		.uk-table tr:nth-child(odd) {
+			background-color: #2e3a50;
+		}
+
+		.uk-table tr:nth-child(even) {
+			background-color: #2b3546;
+		}
+	</style>
 </body>
 </html>

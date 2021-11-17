@@ -21,36 +21,8 @@
 </head>
 <body class="darktheme">
 	<!-- Navigation -->
-	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-		<div class="container">
-			<a class="navbar-brand" href="../index">Isekai Memories</a>
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="../index">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link active" href="../characters">Battle Characters</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="../characters">Protection Characters</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-							Useful Information
-						</a>
-						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-							<a class="dropdown-item whitetext" href="../cooking">Soul Converters</a>
-							<a class="dropdown-item whitetext" href="../tierlist">Protector Overview</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+	<div id="nav-placeholder">
+	</div>
 	<!-- /.End of Navigation -->
 	<div class="container">
 		<!-- Character Name & Icon -->
@@ -191,6 +163,11 @@
 				trigger: 'hover',
 				placement: 'right',
 				content: function () { return '<img src="' + $(this).data('img') + '" />'; }
+			});
+		</script>
+		<script>
+			$.get("navigation.html", function(data){
+				$("#nav-placeholder").replaceWith(data);
 			});
 		</script>
 	</body>

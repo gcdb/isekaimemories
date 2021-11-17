@@ -281,3 +281,7 @@ p {
 .burger-check {
   display: none;
 }
+
+.table-dark {
+  background-color: #0f2337;
+}
