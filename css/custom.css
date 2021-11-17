@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
+
 .navbar{
   background: #1D2430;
 }
@@ -24,15 +25,11 @@ th[colspan="3"] {
   text-align: center;
 }
 
-.greytheme{
-  background-color: #28292b;
-}
-
 html, body{
  height:100%;
  margin:0;
- font-family: 'Roboto Slab', serif
- font-size: 18px;
+ font-family: 'Roboto Slab', serif;
+ font-size: 15px;
 }
 
 body {
@@ -54,16 +51,6 @@ footer{
   width: 100%;
   height: 1px;
   background: #fff;
-}
-
-.carousel-item {
-  height: 50vh;
-  min-height: 300px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 .nav-link {
@@ -128,67 +115,6 @@ a:hover{
   flex-wrap: wrap;
 }
 
-.gc-btn{
-  /* color:#DDD; */
-  border-radius: 0px;
-}
-.btn {
-  margin-bottom: 10px !important;
-}
-.gc-sm-btn{
-  padding: 2px 4px !important;
-  color: rgb(233, 233, 233);
-  background: rgb(55, 55, 55);
-  border-radius: 2px !important;
-}
-
-.gc-sm-btn:hover {
-  background: rgb(101, 45, 45);
-}
-
-.gc-sm-btn > .btn-secondary.dropdown-toggle {
-  background: chartreuse !important;
-}
-
-.gc-btn-non{
-  display: inline-block;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  line-height: 1.5;
-}
-.gc-btn-bg{
-  background:#666
-}
-.gc-disable{
-  pointer-events: none;
-  cursor: not-allowed;
-  color: darkgrey;
-}
-
-.gc-disable2 {
-  cursor: not-allowed;
-}
-
-.gc-disable2 * {
-  pointer-events: none;
-  color: #414141!important;
-}
-.gc-btn-header{
-  font-size: 12px;
-  font-weight:700;
-  vertical-align: text-bottom;
-  padding:0px;
-  /* margin:auto; */
-  padding-top:5px;
-  padding-bottom:5px;
-  color:#FFFFFFff;
-  text-align: center;
-  background: #11111199;
-  border-radius: 0px;
-  text-shadow: 2px 2px 2px #00000022,0px 0px 5px #00000077;
-  /* box-shadow: 0 0px 0px 2px rgba(0, 0, 0, 0.4); */
-}
 .skill-header{
   color: #FFF;
   margin-bottom: 50px;
@@ -197,6 +123,7 @@ a:hover{
 .skill-row{
   margin-bottom: 20px;
 }
+
 /*Filter table*/
 
 .chars2-wrap {
@@ -258,10 +185,6 @@ p {
   margin-bottom: 50px;
 }
 
-.char-portrait {
-  width:100px; 
-  height:100px;
-}
 
 @media (max-width: 767px) {
   .visible-sm {
@@ -300,10 +223,6 @@ p {
     width: 28px;
     transition: border-bottom 1s ease-in-out;
     -webkit-transition: border-bottom 1s ease-in-out;
-  }
-  .burger::-moz-focus-inner {
-    border: 0;
-    padding: 0;
   }
   .burger:before {
     content: "";
@@ -362,4 +281,3 @@ p {
 .burger-check {
   display: none;
 }
-
