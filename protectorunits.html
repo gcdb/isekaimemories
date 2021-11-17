@@ -5,18 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>Characters</title>
+	<title>Protection Units</title>
 	<!-- Favicons -->
 	<link href="images/favicon.png" rel="icon">
 	<!-- Bootstrap core CSS -->
 	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Custom styles for this template -->
 	<link href="css/custom.css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
-	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+	
 	<link href="css/uikit.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/dataTables.uikit.min.css">
 	<script data-ad-client="ca-pub-7948401406873175" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XX1MLEM3JS"></script>
@@ -24,39 +25,39 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
+		
 		gtag('config', 'G-XX1MLEM3JS');
 	</script>
-		<style>
-			html, body {
-				height: 100vh;
-				overflow: auto;
-			}
-			#table_id_info{
-				color: white;
-			}
-			label {
-				color: white;
-			}
-	
-			input {
-				color: white;
-			}
-	
-			.uk-table th {
-				text-align: center;
-				color: white;
-			}
-	
-			
-			.uk-table tr:nth-child(odd) {
-				background-color: #2e3a50;
-			}
-	
-			.uk-table tr:nth-child(even) {
-				background-color: #2b3546;
-			}
-		</style>
+	<style>
+		html, body {
+			height: 100vh;
+			overflow: auto;
+		}
+		#charatable_info{
+			color: white;
+		}
+		label {
+			color: white;
+		}
+		
+		input {
+			color: white;
+		}
+		
+		.uk-table th {
+			text-align: center;
+			color: white;
+		}
+		
+		
+		.uk-table tr:nth-child(odd) {
+			background-color: #2e3a50;
+		}
+		
+		.uk-table tr:nth-child(even) {
+			background-color: #2b3546;
+		}
+	</style>
 </head>
 <body class="darktheme">
 	<!-- Navigation -->
@@ -70,9 +71,9 @@
 				<h1 class="whitetext mb-4">Protection Unit List</h1>
 			</div>
 		</div>
-
+		
 		<div class="mb-4">
-			<table id="table_id" class="uk-table whitetext uk-table-middle uk-table-responsive" style="width:100%; border-color: red">
+			<table id="charatable" class="uk-table whitetext uk-table-middle uk-table-responsive" style="width:100%; border-bottom-color: none;">
 				<thead class="whitetext">
 					<tr>
 						<th style="vertical-align: middle;">Name</th>
@@ -103,7 +104,7 @@
 					
 				</tbody>
 			</table>
-
+			
 		</div>
 		<!-- /.Row -->
 	</div>
@@ -135,20 +136,19 @@
 		<p class="m-0 text-center text-white">GCDatabase is not affliated with or endorsed by Netmarble | <a href="https://www.paypal.me/gcdatabase" style="color: #ff5500" target="_blank">Donations</a> | <a href="https://gcdatabase.com/specialthanks" style="color: #fcba03" target="_blank">Special Thanks</a></p>
 	</footer>
 	<!-- Bootstrap core JavaScript -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
-	<script>
-		$(document).ready(function() {
-			$('#table_id').DataTable( {
-				"paging":   false,
-
-			} );
-		} );
-	</script>
 	<script>
 		$.get("navigation.html", function(data){
 			$("#nav-placeholder").replaceWith(data);
 		});
+	</script>
+	<script>
+		$(document).ready(function() {
+			$('#charatable').DataTable( {
+				"paging":   false,
+				"bInfo": false
+			} );
+		} );
 	</script>
 </body>
 </html>
