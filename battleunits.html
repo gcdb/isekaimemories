@@ -27,6 +27,36 @@
 
 		gtag('config', 'G-XX1MLEM3JS');
 	</script>
+		<style>
+			html, body {
+				height: 100vh;
+				overflow: auto;
+			}
+			#table_id_info{
+				color: white;
+			}
+			label {
+				color: white;
+			}
+	
+			input {
+				color: white;
+			}
+	
+			.uk-table th {
+				text-align: center;
+				color: white;
+			}
+	
+			
+			.uk-table tr:nth-child(odd) {
+				background-color: #2e3a50;
+			}
+	
+			.uk-table tr:nth-child(even) {
+				background-color: #2b3546;
+			}
+		</style>
 </head>
 <body class="darktheme">
 	<!-- Navigation -->
@@ -105,6 +135,8 @@
 		<p class="m-0 text-center text-white">GCDatabase is not affliated with or endorsed by Netmarble | <a href="https://www.paypal.me/gcdatabase" style="color: #ff5500" target="_blank">Donations</a> | <a href="https://gcdatabase.com/specialthanks" style="color: #fcba03" target="_blank">Special Thanks</a></p>
 	</footer>
 	<!-- Bootstrap core JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
 	<script>
 		$(document).ready(function() {
 			$('#table_id').DataTable( {
@@ -113,35 +145,10 @@
 			} );
 		} );
 	</script>
-	<style>
-		html, body {
-			height: 100vh;
-			overflow: auto;
-		}
-		#table_id_info{
-			color: white;
-		}
-		label {
-			color: white;
-		}
-
-		input {
-			color: white;
-		}
-
-		.uk-table th {
-			text-align: center;
-			color: white;
-		}
-
-		
-		.uk-table tr:nth-child(odd) {
-			background-color: #2e3a50;
-		}
-
-		.uk-table tr:nth-child(even) {
-			background-color: #2b3546;
-		}
-	</style>
+	<script>
+		$.get("navigation.html", function(data){
+			$("#nav-placeholder").replaceWith(data);
+		});
+	</script>
 </body>
 </html>
