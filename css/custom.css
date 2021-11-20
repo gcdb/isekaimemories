@@ -285,3 +285,14 @@ p {
 .table-dark {
   background-color: #0f2337;
 }
+
+@media only screen and (min-width: 992px) {
+  .charname {
+    padding-left: 15px;
+  }
+}
+
+.charskill {
+  width: 80px;
+  height: 80px;
+}
